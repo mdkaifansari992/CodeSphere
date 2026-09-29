@@ -1,0 +1,713 @@
+/* ========================================
+   CodeSphere Login Page
+======================================== */
+
+@font-face {
+
+    font-family: "Barlow";
+
+    src: url("/Fonts/Barlow-Regular.ttf");
+
+    font-weight: 400;
+
+}
+
+
+@font-face {
+
+    font-family: "Barlow";
+
+    src: url("/Fonts/Barlow-Medium.ttf");
+
+    font-weight: 500;
+
+}
+
+
+@font-face {
+
+    font-family: "Barlow";
+
+    src: url("/Fonts/Barlow-SemiBold.ttf");
+
+    font-weight: 600;
+
+}
+
+
+@font-face {
+
+    font-family: "Barlow";
+
+    src: url("/Fonts/Barlow-Bold.ttf");
+
+    font-weight: 700;
+
+}
+
+
+/* ========================================
+   Body
+======================================== */
+
+body {
+
+    margin: 0;
+
+    font-family: "Barlow", sans-serif;
+
+    color: #111638;
+
+}
+
+
+/* ========================================
+   Login Page
+======================================== */
+
+.login-page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    background:
+
+        radial-gradient(circle at 10% 15%,
+            rgba(28, 50, 164, 0.12),
+            transparent 25%),
+
+        radial-gradient(circle at 90% 85%,
+            rgba(28, 50, 164, 0.10),
+            transparent 25%),
+
+        #f5f9ff;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* Decorative Circle */
+
+.login-page::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+
+    height: 420px;
+
+    border-radius: 50%;
+
+    background: rgba(28, 50, 164, 0.06);
+
+    top: -180px;
+
+    right: -120px;
+
+}
+
+
+/* Decorative Circle */
+
+.login-page::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+
+    height: 450px;
+
+    border-radius: 50%;
+
+    background: rgba(37, 148, 255, 0.07);
+
+    bottom: -250px;
+
+    left: -150px;
+
+}
+
+
+/* ========================================
+   Login Card
+======================================== */
+
+.login-card {
+
+    width: 100%;
+
+    max-width: 620px;
+
+    padding: 42px 55px;
+
+    background: #ffffff;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 60px rgba(17, 22, 56, 0.12);
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* ========================================
+   Brand
+======================================== */
+
+.brand-section {
+
+    text-align: center;
+
+    margin-bottom: 28px;
+
+}
+
+
+.brand-section h1 {
+
+    margin: 0;
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    color: #111638;
+
+}
+
+
+.brand-section h1 span {
+
+    color: #1C32A4;
+
+}
+
+
+.brand-section p {
+
+    margin: 5px 0 0;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #7180a5;
+
+}
+
+
+/* ========================================
+   Heading
+======================================== */
+
+.login-heading {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.login-heading h2 {
+
+    margin: 0;
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    color: #111638;
+
+}
+
+
+.login-heading p {
+
+    margin: 7px 0 0;
+
+    font-size: 16px;
+
+    color: #7180a5;
+
+}
+
+
+/* ========================================
+   Form
+======================================== */
+
+.form-group {
+
+    margin-bottom: 20px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    color: #111638;
+
+}
+
+
+/* ========================================
+   Input
+======================================== */
+
+.input-wrapper {
+
+    position: relative;
+
+}
+
+
+.input-wrapper>i {
+
+    position: absolute;
+
+    left: 17px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #7c89a8;
+
+    font-size: 17px;
+
+    z-index: 2;
+
+}
+
+
+.input-wrapper input {
+
+    width: 100%;
+
+    height: 52px;
+
+    padding: 0 48px;
+
+    border: 1px solid #d9e0ee;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-family: "Barlow", sans-serif;
+
+    font-size: 15px;
+
+    color: #111638;
+
+    background: #ffffff;
+
+    transition: 0.3s ease;
+
+}
+
+
+.input-wrapper input::placeholder {
+
+    color: #9aa5bd;
+
+}
+
+
+.input-wrapper input:focus {
+
+    border-color: #1C32A4;
+
+    box-shadow: 0 0 0 3px rgba(28, 50, 164, 0.08);
+
+}
+
+
+/* ========================================
+   Password Toggle
+======================================== */
+
+.password-toggle {
+
+    position: absolute;
+
+    right: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    color: #7c89a8;
+
+    padding: 5px;
+
+    cursor: pointer;
+
+}
+
+
+/* ========================================
+   Login Options
+======================================== */
+
+.login-options {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin: 5px 0 22px;
+
+    font-size: 14px;
+
+}
+
+
+.remember-me {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+.remember-me input {
+
+    width: 15px;
+
+    height: 15px;
+
+    accent-color: #1C32A4;
+
+}
+
+
+.remember-me label {
+
+    color: #4f5c79;
+
+    cursor: pointer;
+
+}
+
+
+.forgot-password {
+
+    color: #1C32A4;
+
+    text-decoration: none;
+
+    font-weight: 500;
+
+}
+
+
+.forgot-password:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* ========================================
+   Login Button
+======================================== */
+
+.login-btn {
+
+    width: 100%;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #1C32A4;
+
+    color: #FFFFFF;
+
+    font-family: "Barlow", sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+}
+
+
+.login-btn i {
+
+    margin-left: 8px;
+
+}
+
+
+.login-btn:hover {
+
+    background: #16298a;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* ========================================
+   OR Divider
+======================================== */
+
+.or-divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 25px 0 18px;
+
+}
+
+
+.or-divider span {
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #e1e5ee;
+
+}
+
+
+.or-divider p {
+
+    margin: 0;
+
+    color: #8b96ad;
+
+    font-size: 14px;
+
+}
+
+
+/* ========================================
+   Social Buttons
+======================================== */
+
+.social-buttons {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+}
+
+
+.social-btn {
+
+    height: 48px;
+
+    border: 1px solid #d9e0ee;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #111638;
+
+    font-family: "Barlow", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+}
+
+
+.social-btn i {
+
+    margin-right: 7px;
+
+    font-size: 17px;
+
+}
+
+
+.social-btn:hover {
+
+    border-color: #1C32A4;
+
+    background: #f7f9ff;
+
+}
+
+
+/* ========================================
+   Register
+======================================== */
+
+.register-text {
+
+    text-align: center;
+
+    margin: 25px 0 0;
+
+    color: #7180a5;
+
+    font-size: 14px;
+
+}
+
+
+.register-text a {
+
+    color: #1C32A4;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+}
+
+
+.register-text a:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* ========================================
+   Tablet
+======================================== */
+
+@media (max-width: 767px) {
+
+    .login-page {
+
+        padding: 25px 15px;
+
+    }
+
+
+    .login-card {
+
+        max-width: 520px;
+
+        padding: 35px 30px;
+
+        border-radius: 18px;
+
+    }
+
+}
+
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width: 576px) {
+
+    .login-card {
+
+        padding: 30px 20px;
+
+        border-radius: 16px;
+
+    }
+
+
+    .brand-section h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    .brand-section p {
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .login-heading h2 {
+
+        font-size: 27px;
+
+    }
+
+
+    .login-heading p {
+
+        font-size: 14px;
+
+    }
+
+
+    .social-buttons {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .login-options {
+
+        font-size: 13px;
+
+    }
+
+}
